@@ -1,2 +1,16 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Forzar que los finales de línea sean siempre LF (estándar de Linux/Mac)
+# Esto evita problemas si alguien abre el código en Windows
+* text=auto eol=lf
+
+# Identificar archivos que son código para que GitLab los resalte bien
+*.js   text
+*.jsx  text
+*.json text
+*.html text
+*.css  text
+
+# Identificar archivos binarios (imágenes) para que Git no intente "leer" el texto dentro
+*.jpg  binary
+*.png  binary
+*.webp binary
+*.ico  binary
