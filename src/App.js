@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './layout/Navbar';
 import ProductList from './views/ProductList';
 import Cart from './views/Cart';
+import './styles/App.css';
 
 function App() {
     const [cart, setCart] = useState([]);
@@ -17,7 +18,7 @@ function App() {
     };
 
     return (
-        <div className="App" style={{ fontFamily: 'Georgia, serif', color: '#1a1a1a' }}>
+        <div className="app-container" style={{ fontFamily: 'Georgia, serif', color: '#1a1a1a' }}>
             <Navbar
                 cartCount={cart.length}
                 onCartClick={() => setView('cart')}

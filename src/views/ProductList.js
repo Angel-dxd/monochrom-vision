@@ -54,7 +54,7 @@ const ProductList = ({ onAgregar }) => {
                             <p className="product-description">{gafa.descripcion}</p>
 
                             <div style={{ marginBottom: '20px', fontSize: '0.75rem', color: '#999', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                                🛡️ DANYANG OPTICS®️ <br />
+                                ✓ Calidad DANYANG OPTICS®️ <br />
                                 <span style={{ fontSize: '0.65rem' }}>Cumplimiento Normativa Int. Importación</span>
                             </div>
 
