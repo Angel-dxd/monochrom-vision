@@ -36,6 +36,16 @@ function App() {
                                 </p>
                             </div>
                         </section>
+
+                        <section style={{ backgroundColor: '#fcfcfc', padding: '60px 20px', borderTop: '1px solid #eee', borderBottom: '1px solid #eee' }}>
+                            <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+                                <h2 style={{ fontSize: '1.8rem', letterSpacing: '2px', marginBottom: '20px' }}>NUESTRA HISTORIA</h2>
+                                <p style={{ color: '#666', lineHeight: '1.8', fontSize: '1rem' }}>
+                                    Fundada en <strong>2018</strong>, Aurion X Optics S.L. nace con la misión de fusionar diseño vanguardista y protección ocular extrema.
+                                    Desde nuestra <strong>base logística en Sagunto (Valencia)</strong>, operamos a nivel internacional para llevar la mejor tecnología fotocromática y óptica Danyang directamente a tus ojos.
+                                </p>
+                            </div>
+                        </section>
                         <ProductList onAgregar={agregarAlCarrito} />
                     </>
                 ) : (
@@ -43,9 +53,26 @@ function App() {
                 )}
             </main>
 
-            <footer style={{ padding: '40px', textAlign: 'center', borderTop: '1px solid #eee', marginTop: '50px' }}>
-                <p style={{ fontWeight: 'bold' }}>AURION X OPTICS</p>
-                <p style={{ color: '#888', fontSize: '0.8rem' }}>Sagunto, Valencia | @aurion.x.optics</p>
+            <footer style={{ padding: '50px 20px', textAlign: 'center', borderTop: '1px solid #eee', marginTop: '50px', backgroundColor: '#111', color: '#fff' }}>
+                <p style={{ fontWeight: 'bold', letterSpacing: '2px', marginBottom: '15px' }}>AURION X OPTICS, S.L.</p>
+                <div style={{ color: '#aaa', fontSize: '0.8rem', lineHeight: '1.6', maxWidth: '600px', margin: '0 auto' }}>
+                    <p>N.I.F. B98765432</p>
+                    <p>Sede Social: Av. de Europa nº 12, Valencia, España</p>
+                    <p>Nave Industrial: Polígono Industrial de Sagunto, Calle Talleres, nave 43</p>
+                    <p style={{ marginTop: '15px' }}>
+                        Síguenos en Instagram |{' '}
+                        <a
+                            href="https://instagram.com/aurion.x.optics"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ color: '#fff', textDecoration: 'none', fontWeight: 'bold' }}
+                            onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
+                            onMouseOut={(e) => e.target.style.textDecoration = 'none'}
+                        >
+                            @aurion.x.optics
+                        </a>
+                    </p>
+                </div>
             </footer>
         </div>
     );

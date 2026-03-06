@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import datosGafas from '../data/gafas.json';
+import '../styles/Product.css';
 
 const ProductList = ({ onAgregar }) => {
     const [productos] = useState(datosGafas);
@@ -21,7 +22,7 @@ const ProductList = ({ onAgregar }) => {
     };
 
     return (
-        <div style={{ padding: '40px', maxWidth: '1200px', margin: '0 auto' }}>
+        <div className="product-list-container">
             {notificacion && (
                 <div style={{
                     position: 'fixed', top: '100px', right: '20px', backgroundColor: '#000',
@@ -31,27 +32,36 @@ const ProductList = ({ onAgregar }) => {
                 </div>
             )}
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px' }}>
+            <div className="product-grid">
                 {productos.map((gafa) => {
                     const extra = seleccion[gafa.id] || 0;
                     const precioFinal = gafa.precioBase + extra;
 
                     return (
-                        <div key={gafa.id} style={{
-                            backgroundColor: '#fff', borderRadius: '0px', padding: '25px',
-                            border: '1px solid #eee', textAlign: 'center'
-                        }}>
-                            <div style={{ height: '250px', overflow: 'hidden', backgroundColor: '#f9f9f9', marginBottom: '20px' }}>
-                                <img src={gafa.imagen} alt={gafa.nombre} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <div key={gafa.id} className={`product-card ${!gafa.stock ? 'out-of-stock' : ''}`}>
+                            <div className="product-image-container">
+                                <img
+                                    src={gafa.imagen}
+                                    alt={gafa.nombre}
+                                    className="product-image"
+                                    onError={(e) => {
+                                        e.target.src = "https://via.placeholder.com/400x300?text=Cargando+Imagen...";
+                                    }}
+                                />
                             </div>
 
-                            <h2 style={{ fontSize: '1.2rem', letterSpacing: '1px' }}>{gafa.nombre}</h2>
-                            <p style={{ color: '#666', fontSize: '0.85rem' }}>{gafa.descripcion}</p>
+                            <h2 className="product-title">{gafa.nombre}</h2>
+                            <p className="product-description">{gafa.descripcion}</p>
 
-                            <div style={{ margin: '20px 0' }}>
+                            <div style={{ marginBottom: '20px', fontSize: '0.75rem', color: '#999', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                                🛡️ DANYANG OPTICS®️ <br />
+                                <span style={{ fontSize: '0.65rem' }}>Cumplimiento Normativa Int. Importación</span>
+                            </div>
+
+                            <div className="product-select-container">
                                 <select
                                     onChange={(e) => setSeleccion({ ...seleccion, [gafa.id]: parseInt(e.target.value) })}
-                                    style={{ width: '100%', padding: '12px', border: '1px solid #000', borderRadius: '0px' }}
+                                    className="product-select"
                                 >
                                     <option value="0">Fotocromática Estándar - {gafa.precioBase}€</option>
                                     <option value="220">Fotocromática Graduada - {gafa.precioBase + 220}€</option>
@@ -59,18 +69,24 @@ const ProductList = ({ onAgregar }) => {
                             </div>
 
                             {(seleccion[gafa.id] === 220) && (
-                                <select
-                                    onChange={(e) => setGraduacionElegida({ ...graduacionElegida, [gafa.id]: e.target.value })}
-                                    style={{ width: '100%', padding: '10px', marginBottom: '20px', border: '1px dashed #000' }}
-                                >
-                                    <option value="">Selecciona Graduación...</option>
-                                    {dioptriasEstandar.map(d => <option key={d} value={d}>{d}</option>)}
-                                </select>
+                                <div style={{ marginBottom: '20px', padding: '15px', backgroundColor: '#fcfcfc', borderRadius: '10px', border: '1px solid #000' }}>
+                                    <select
+                                        onChange={(e) => setGraduacionElegida({ ...graduacionElegida, [gafa.id]: e.target.value })}
+                                        className="product-select"
+                                        style={{ border: '1px solid #ddd' }}
+                                    >
+                                        <option value="">Selecciona Graduación...</option>
+                                        {dioptriasEstandar.map(d => <option key={d} value={d}>{d}</option>)}
+                                    </select>
+                                </div>
                             )}
 
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{precioFinal}€</span>
-                                <button onClick={() => manejarCompra(gafa)} style={{ backgroundColor: '#000', color: '#fff', padding: '12px 30px', border: 'none', cursor: 'pointer' }}>
+                            <div className="product-action-row">
+                                <span className="product-price">{precioFinal}€</span>
+                                <button
+                                    onClick={() => manejarCompra(gafa)}
+                                    className="btn-buy"
+                                >
                                     COMPRAR
                                 </button>
                             </div>

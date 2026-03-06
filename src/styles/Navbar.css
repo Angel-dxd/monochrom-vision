@@ -8,7 +8,8 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Added slight shadow for modern feel */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    /* Added slight shadow for modern feel */
 }
 
 .navbar-logo {
@@ -48,4 +49,15 @@
     right: -10px;
     font-weight: bold;
     box-shadow: 0 2px 4px rgba(255, 71, 87, 0.3);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar-logo {
+        font-size: 1.2rem;
+    }
 }
