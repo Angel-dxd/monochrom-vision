@@ -8,7 +8,7 @@ const Navbar = ({ onCartClick, onLogoClick }) => {
     return (
         <nav className="navbar">
             <div className="navbar-logo" onClick={onLogoClick}>
-                MONOCHROM VISION
+                AURION X VISION
             </div>
             <div className="navbar-cart" onClick={onCartClick}>
                 🛒 <span className="navbar-cart-badge">{cantidadTotal}</span>
