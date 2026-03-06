@@ -30,20 +30,19 @@ function App() {
                     <>
                         <section style={{ padding: '80px 20px', textAlign: 'center', backgroundColor: '#fff' }}>
                             <h1 style={{ fontSize: '3rem', letterSpacing: '5px', marginBottom: '20px' }}>AURION X VISION</h1>
-                            <div style={{ maxWidth: '700px', margin: '0 auto', lineHeight: '1.8' }}>
-                                <p style={{ fontSize: '1.1rem', fontStyle: 'italic', color: '#555' }}>
-                                    Desde <strong>Sagunto, Valencia</strong>, redefinimos la óptica con tecnología fotocromática avanzada.
-                                    Lentes que cambian a negro al contacto con la luz.
+                            <div style={{ maxWidth: '800px', margin: '0 auto', lineHeight: '1.8' }}>
+                                <p style={{ fontSize: '1.15rem', fontStyle: 'italic', color: '#333' }}>
+                                    Ingeniería fotocromática avanzada diseñada desde nuestra matriz en <strong>Sagunto, Valencia</strong>. <br />
+                                    Transiciones inteligentes de estado sólido que garantizan precisión nanométrica y nitidez absoluta frente a cualquier espectro UV.
                                 </p>
                             </div>
                         </section>
 
                         <section style={{ backgroundColor: '#fcfcfc', padding: '60px 20px', borderTop: '1px solid #eee', borderBottom: '1px solid #eee' }}>
                             <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-                                <h2 style={{ fontSize: '1.8rem', letterSpacing: '2px', marginBottom: '20px' }}>NUESTRA HISTORIA</h2>
-                                <p style={{ color: '#666', lineHeight: '1.8', fontSize: '1rem' }}>
-                                    Fundada en <strong>2018</strong>, Aurion X Optics S.L. nace con la misión de fusionar diseño vanguardista y protección ocular extrema.
-                                    Desde nuestra <strong>base logística en Sagunto (Valencia)</strong>, operamos a nivel internacional para llevar la mejor tecnología fotocromática y óptica Danyang directamente a tus ojos.
+                                <h2 style={{ fontSize: '1.8rem', letterSpacing: '2px', marginBottom: '20px' }}>NUESTRO EJE LOGÍSTICO (2025)</h2>
+                                <p style={{ color: '#555', lineHeight: '1.8', fontSize: '1.05rem' }}>
+                                    Nacida de la necesidad de fusionar un rendimiento ocular extremo con el diseño europeo de vanguardia, Aurion X Optics S.L. concentra sus operaciones internacionales en el Polígono Industrial de <strong>Sagunto</strong>. Esta localización estratégica nos permite una cadena de distribución ultrarrápida para integrar la inigualable precisión y el pulido avanzado de la <strong>Óptica Danyang</strong> en cada una de nuestras monturas.
                                 </p>
                             </div>
                         </section>
