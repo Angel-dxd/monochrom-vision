@@ -1,29 +1,20 @@
 [
     {
         "id": 1,
-        "nombre": "Rose Quartz",
-        "precioBase": 45,
-        "color": "Rosa",
-        "descripcion": "Reduce la ansiedad y mejora el estado de ánimo.",
-        "imagen": "https://via.placeholder.com/300/FFC0CB/000000?text=Rose+Quartz",
+        "nombre": "Aurion Carbon Night",
+        "precioBase": 225,
+        "color": "Fotocromático Negro",
+        "descripcion": "Tecnología Aurion X: Cristal inteligente que cambia a negro profundo al contacto con la luz solar. Diseño premium de Sagunto.",
+        "imagen": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=1000&auto=format&fit=crop",
         "stock": true
     },
     {
         "id": 2,
-        "nombre": "Deep Ocean",
-        "precioBase": 55,
-        "color": "Azul Profundo",
-        "descripcion": "Ideal para máxima concentración y calma mental.",
-        "imagen": "https://via.placeholder.com/300/00008B/FFFFFF?text=Deep+Ocean",
+        "nombre": "Aurion Stealth Grey",
+        "precioBase": 245,
+        "color": "Fotocromático Humo",
+        "descripcion": "Nuestra gafa más detallada. Base premium con transición ultra rápida a oscuro intenso. Exclusividad online.",
+        "imagen": "https://images.unsplash.com/photo-1511499767350-a159402e5bf1?q=80&w=1000&auto=format&fit=crop",
         "stock": true
-    },
-    {
-        "id": 3,
-        "nombre": "Forest Zen",
-        "precioBase": 48,
-        "color": "Verde",
-        "descripcion": "Equilibrio natural y descanso para la vista cansada.",
-        "imagen": "https://via.placeholder.com/300/228B22/FFFFFF?text=Forest+Zen",
-        "stock": false
     }
 ]
